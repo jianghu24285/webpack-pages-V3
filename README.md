@@ -1,4 +1,3 @@
-# Webpack填坑之路
 > &emsp;&emsp;借助webpack搭建前端工程化、模块化开发, 十分喜欢Vue脚手架的配置, 简洁清晰, 所以大量参考vue-cli的webpack配置.   
 > &emsp;&emsp;这里webpack版本是3X, 做个存档, 4X再开一个新的. 除了webpack、gulp、grunt这几个自动化工具，[rollup](http://www.rollupjs.com/)、[parcel](http://www.css88.com/doc/parcel/) 也慢慢流行起来，有空来认真测试填坑.
     
