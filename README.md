@@ -217,7 +217,8 @@ npm run build
    *其它有用的插件*:   
    - postcss-pxtorem        ——*px单位自动转换rem*
    - postcss-assets         ——*插件用来处理图片和SVG, 类似url-load*
-   - Postcss-sprites        ——*将扫描你CSS中使用的所有图像，自动生成优化的 Sprites 图像和 CSS Sprites 代码*
+   - postcss-sprites        ——*将扫描你CSS中使用的所有图像，自动生成优化的 Sprites 图像和 CSS Sprites 代码*
+   - postcss-font-magician        ——*使用自定义字体时, 自动搞定@font-face声明*
     
    Less是预处理, 而PostCSS是后处理, 基本支持less等预处理器的功能, 自动添加浏览器厂商前缀向前兼容, 允许书写下一代css语法 , 可以在编译时去除冗余的css代码, PostCSS 声称比预处理器快 3-30 倍.   
 **因为PostCSS, 可能我们要放弃less/sass/stylus了**.
