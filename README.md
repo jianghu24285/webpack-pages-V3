@@ -1,3 +1,5 @@
+# Webpack多页面打包
+
 > &emsp;&emsp;借助webpack搭建前端工程化、模块化开发, 十分喜欢Vue脚手架的配置, 简洁清晰, 所以大量参考vue-cli的webpack配置.   
 > &emsp;&emsp;这里webpack版本是3X, 做个存档, 4X再开一个新的. 除了webpack、gulp、grunt这几个自动化工具，[rollup](http://www.rollupjs.com/)、[parcel](http://www.css88.com/doc/parcel/) 也慢慢流行起来，有空来认真测试填坑.
     
@@ -134,7 +136,7 @@ npm run build
    
    这种情况通过babel-polyfill解决 ( 参考文档: [babel-polyfill的作用?](https://blog.csdn.net/crazyfeeling/article/details/70241285), 以及[babel-polyfill的引用和使用](https://www.cnblogs.com/princesong/p/6728250.html) ), 安装好依赖以后, 并不会自动生效, 需要在js代码的第一行引入才行:   
    ```bash
-   import 'babel-polyfill' 或 require 'babel-polyfill' 
+   import 'babel-polyfill' 或 require('babel-polyfill') 
    ```
    或者, 在webpack.config.js中, 改写entry对应的入口字符串值为数组, 'babel-polyfill'作为数组第一个元素 ( 不推荐 ):   
    ```bash
