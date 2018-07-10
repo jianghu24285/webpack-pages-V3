@@ -4,10 +4,6 @@
 > &emsp;&emsp;这里webpack版本是3X, 做个存档, 4X再开一个新的. 除了webpack、gulp、grunt这几个自动化工具，[rollup](http://www.rollupjs.com/)、[parcel](http://www.css88.com/doc/parcel/) 也慢慢流行起来，有空来认真测试填坑.
     
 <br>
-
-Demo源码 : [https://github.com/Eleven90/webpack-pages-V3](https://github.com/Eleven90/webpack-pages-V3)
-
-<br>
     
 ## 编译命令
 ```bash
@@ -44,7 +40,6 @@ npm run build
     "less": "^3.0.4",
     "less-loader": "^4.1.0",****
     "postcss-cssnext": "^3.1.0",
-    "postcss-font-magician": "^2.2.1",
     "postcss-import": "^11.1.0",
     "postcss-loader": "^2.1.5",
     "style-loader": "^0.21.0",
@@ -222,8 +217,7 @@ npm run build
    - postcss-sprites        ——*将扫描你CSS中使用的所有图像，自动生成优化的 Sprites 图像和 CSS Sprites 代码*
    - postcss-font-magician        ——*使用自定义字体时, 自动搞定@font-face声明*
     
-   Less是预处理, 而PostCSS是后处理, 基本支持less等预处理器的功能, 自动添加浏览器厂商前缀向前兼容, 允许书写下一代css语法 , 可以在编译时去除冗余的css代码, PostCSS 声称比预处理器快 3-30 倍.   
-**因为PostCSS, 可能我们要放弃less/sass/stylus了**.
+   Less是预处理, 而PostCSS是后处理, 基本支持less等预处理器的功能, 自动添加浏览器厂商前缀向前兼容, 允许书写下一代css语法 , 可以在编译时去除冗余的css代码, PostCSS 声称比预处理器快 3-30 倍.   **因为PostCSS, 可能我们要放弃less/sass/stylus了**.
 
 <br><br>
 
@@ -422,7 +416,7 @@ npm run build
       }
       ```
 
-**以上是正常处理一个 *"可以NPM安装但又不符合webpack模块化规范"* 的库, 例如其它库XX, 处理后可以直接 import xx from XX 后使用; 但是, zepto有点特殊, 默认npm安装的包或者从github clone的包, 都是仅包含5个模块, 其它如常用的touch模块是未包含的, 想要正常使用还需做得更多.**
+*以上是正常处理一个 *"可以NPM安装但又不符合webpack模块化规范"* 的库, 例如其它库XX, 处理后可以直接 import xx from XX 后使用; 但是, zepto有点特殊, 默认npm安装的包或者从github clone的包, 都是仅包含5个模块, 其它如常用的touch模块是未包含的, 想要正常使用还需做得更多.*
 
   3. 怎样拿到一个包含更多模块的zepto包 ?
      
@@ -461,7 +455,7 @@ npm run build
      })
      ```
 
-**大功告成, 现在使用zepto跟你使用jquery或其它node包是一样的开发体验了 !**
+      **大功告成, 现在使用zepto跟你使用jquery或其它node包是一样的开发体验了 !**
 
 <br><br>
      
