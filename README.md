@@ -3,6 +3,10 @@
 > &emsp;&emsp;这里webpack版本是3X, 做个存档, 4X再开一个新的. 除了webpack、gulp、grunt这几个自动化工具，[rollup](http://www.rollupjs.com/)、[parcel](http://www.css88.com/doc/parcel/) 也慢慢流行起来，有空来认真测试填坑.
     
 <br>
+
+Demo源码 : [https://github.com/Eleven90/webpack-pages-V3](https://github.com/Eleven90/webpack-pages-V3)
+
+<br>
     
 ## 编译命令
 ```bash
