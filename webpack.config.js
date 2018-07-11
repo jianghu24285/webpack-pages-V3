@@ -3,7 +3,7 @@
  * @Author: Eleven 
  * @Date: 2018-07-03 00:17:01 
  * @Last Modified by: Eleven
- * @Last Modified time: 2018-07-10 01:57:22
+ * @Last Modified time: 2018-07-11 19:24:02
  */
 
 const path = require('path')
@@ -59,7 +59,7 @@ let config = {
         path: path.resolve(__dirname, 'static'), // 输出目录的配置，模板、样式、脚本、图片等资源的路径配置都相对于它
         publicPath: '/', // 模板、样式、脚本、图片等资源对应的server上的路径
         filename: 'js/[name].js', // 每个页面对应的主js的生成配置
-        chunkFilename: 'js/[id].chunk.js' // chunk生成的配置
+        chunkFilename: 'js/[id].js' // chunk生成的配置
     },
     resolve: {
         //自动扩展文件后缀名，意味着我们require模块可以省略不写后缀名
