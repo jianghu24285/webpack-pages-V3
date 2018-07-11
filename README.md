@@ -416,7 +416,7 @@ npm run build
       }
       ```
 
-*以上是正常处理一个 *"可以NPM安装但又不符合webpack模块化规范"* 的库, 例如其它库XX, 处理后可以直接 import xx from XX 后使用; 但是, zepto有点特殊, 默认npm安装的包或者从github clone的包, 都是仅包含5个模块, 其它如常用的touch模块是未包含的, 想要正常使用还需做得更多.*
+      > *以上是正常处理一个 *"可以NPM安装但又不符合webpack模块化规范"* 的库, 例如其它库XX, 处理后可以直接 import xx from XX 后使用; 但是, zepto有点特殊, 默认npm安装的包或者从github clone的包, 都是仅包含5个模块, 其它如常用的touch模块是未包含的, 想要正常使用还需做得更多.*
 
   3. 怎样拿到一个包含更多模块的zepto包 ?
      
@@ -455,7 +455,10 @@ npm run build
      })
      ```
 
-      **大功告成, 现在使用zepto跟你使用jquery或其它node包是一样的开发体验了 !**
+      *大功告成, 现在使用zepto跟你使用jquery或其它node包是一样的开发体验了 !*
+
+     > *以上, 演示的是对于一个第三方库( 不能npm安装,也不符合webpack规范 ), 如何去处理, 达到和正常npm安装一样的开发体验, 仅就zepto来说, npm库有符合webpack规范的不同版本 ([zepto-webpack](https://www.npmjs.com/package/zepto-webpack), 或 [zepto-modules](https://www.npmjs.com/package/zepto-modules)), 有需要可以试试.  
+     平时意图使用某个包, 先去[NPM官网](https://www.npmjs.com/)搜一搜比较好.*
 
 <br><br>
      
