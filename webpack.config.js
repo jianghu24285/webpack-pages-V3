@@ -3,7 +3,7 @@
  * @Author: Eleven 
  * @Date: 2018-07-03 00:17:01 
  * @Last Modified by: Eleven
- * @Last Modified time: 2018-07-11 19:24:02
+ * @Last Modified time: 2018-07-11 22:11:00
  */
 
 const path = require('path')
@@ -45,7 +45,7 @@ let getEntries = () => {
 
     getFilesName('src/js/pages/**/*.js').forEach(fileName => {
         obj[fileName] = './src/js/pages/' + fileName + '.js';
-    });
+    })
     return obj
 }
 
@@ -58,8 +58,7 @@ let config = {
     output: {
         path: path.resolve(__dirname, 'static'), // 输出目录的配置，模板、样式、脚本、图片等资源的路径配置都相对于它
         publicPath: '/', // 模板、样式、脚本、图片等资源对应的server上的路径
-        filename: 'js/[name].js', // 每个页面对应的主js的生成配置
-        chunkFilename: 'js/[id].js' // chunk生成的配置
+        filename: 'js/[name].js' // 每个页面对应的主js的生成配置
     },
     resolve: {
         //自动扩展文件后缀名，意味着我们require模块可以省略不写后缀名
@@ -87,7 +86,7 @@ let config = {
             // 处理less/css文件(从右到左依次调用less、css、style加载器，前一个的输出是后一个的输入)
             {
                 test: /\.(less|css)$/,
-                loader: ExtractTextPlugin.extract({
+                use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: ['css-loader', 'postcss-loader', 'less-loader']
                 })
