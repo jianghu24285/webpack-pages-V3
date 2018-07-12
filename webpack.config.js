@@ -3,7 +3,7 @@
  * @Author: Eleven 
  * @Date: 2018-07-03 00:17:01 
  * @Last Modified by: Eleven
- * @Last Modified time: 2018-07-11 19:24:02
+ * @Last Modified time: 2018-07-12 11:20:29
  */
 
 const path = require('path')
@@ -198,6 +198,10 @@ if (isProduction) {
                 beautify: false, // 不美化输出
                 comments: false   // 删除所有的注释
             }
+        }),
+        // 一些 library 可能针对具体用户的环境进行代码优化,从而删除或添加一些重要代码,所以添加这个配置
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('production')
         })
     )
 }
