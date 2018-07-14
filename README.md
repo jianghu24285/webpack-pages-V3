@@ -529,6 +529,26 @@ npm run build
 
 <br><br>
 
+> **http-server, 比自己配置一个express服务更简洁的方式, 去访问打包后的资源.**
+  
+  1. 安装依赖
+     
+     ```bash
+     npm i http-server -D
+     ```
+  2. package.json配置命令
+     
+     ```json
+     "server": "http-server static"
+     ```
+  3. 访问路径
+     
+     ```bash
+     localhost:8080 或 http://127.0.0.1:8080 等.
+     ```
+
+<br><br>
+
 ## 参考文档:
 - [webpack中文文档](https://www.webpackjs.com/concepts/) —— 直接阅读它非常有用, 百度出来的教程99%都是管中窥豹, 只见一斑, 会形成误导 ( 不要问我是怎么知道的 -_- ) .
 - [基于webpack的前端工程化开发之多页站点篇（一）](https://segmentfault.com/a/1190000004511992)
