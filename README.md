@@ -15,6 +15,9 @@ npm run dev
 
 #  打包发布
 npm run build
+
+#  访问打包后目录
+npm run server 或 npm run http-server
 ```
 
 ## 主要的依赖包
@@ -526,6 +529,26 @@ npm run build
        ```bash
        localhost:9898/views/
        ```
+
+<br><br>
+
+> **http-server, 比自己配置一个express服务更简洁的方式, 去访问打包后的资源.**
+  
+  1. 安装依赖
+     
+     ```bash
+     npm i http-server -D
+     ```
+  2. package.json配置命令
+     
+     ```json
+     "server": "http-server static"
+     ```
+  3. 访问路径
+     
+     ```bash
+     localhost:8080 或 http://127.0.0.1:8080
+     ```
 
 <br><br>
 
