@@ -2,21 +2,23 @@
  * @Author: Eleven 
  * @Date: 2018-07-03 10:38:31 
  * @Last Modified by: Eleven
- * @Last Modified time: 2018-07-05 23:36:20
+ * @Last Modified time: 2018-07-27 18:35:47
  */
 
-import './commonController'
-
+import common from './commonController'
 import List from '../components/list'
 
-let ListController = function () {
-  this.init()
-}
+class ListController {
+  constructor() {
 
-ListController.prototype.init = function () {
-  let list = new List()
+  }
 
-  list.test()
+  init() {
+    let list = new List()
+    
+    common.init()
+    list.test()
+  }
 }
 
 export default new ListController()

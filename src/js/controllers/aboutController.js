@@ -2,21 +2,23 @@
  * @Author: Eleven 
  * @Date: 2018-07-03 10:48:40 
  * @Last Modified by: Eleven
- * @Last Modified time: 2018-07-05 23:37:01
+ * @Last Modified time: 2018-07-27 18:32:48
  */
 
-import './commonController'
-
+import common from './commonController'
 import About from '../components/about'
 
-let AboutController = function () {
-  this.init()
-}
+class AboutController {
+  constructor() {
 
-AboutController.prototype.init = function () {
-  let about = new About()
+  }
 
-  about.test()
+  init() {
+    let about = new About()
+
+    common.init()
+    about.test()
+  }
 }
 
 export default new AboutController()
