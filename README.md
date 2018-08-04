@@ -41,7 +41,7 @@ npm run server 或 npm run http-server
     "html-webpack-plugin": "^3.2.0",
     "jquery": "^3.3.1",
     "less": "^3.0.4",
-    "less-loader": "^4.1.0",****
+    "less-loader": "^4.1.0",
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^11.1.0",
     "postcss-loader": "^2.1.5",
