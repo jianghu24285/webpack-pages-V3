@@ -31,15 +31,17 @@ npm run server 或 npm run http-server
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-2": "^6.24.1",
     "babel-runtime": "^6.26.0",
+    "cache-loader": "^1.2.2",
     "cross-env": "^5.2.0",
     "css-loader": "^0.28.11",
     "cssnano": "^4.0.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.11",
     "glob": "^7.1.2",
+    "happypack": "^5.0.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
-    "jquery": "^3.3.1",
+    "http-server": "^0.11.1",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "postcss-cssnext": "^3.1.0",
@@ -462,6 +464,17 @@ npm run server 或 npm run http-server
 
      > *以上, 演示的是对于一个第三方库( 不能npm安装,也不符合webpack规范 ), 如何去处理, 达到和正常npm安装一样的开发体验, 仅就zepto来说, npm库有符合webpack规范的不同版本 ([zepto-webpack](https://www.npmjs.com/package/zepto-webpack), 或 [zepto-modules](https://www.npmjs.com/package/zepto-modules)), 有需要可以试试.  
      平时意图使用某个包, 先去[NPM官网](https://www.npmjs.com/)搜一搜比较好.*
+
+<br><br>
+
+> 使用happypack来优化, 多进程运行webpack .
+   
+   - [webpack优化之HappyPack 实战](https://www.jianshu.com/p/b9bf995f3712)
+   - [happypack 原理解析](https://yq.aliyun.com/articles/67269)
+
+<br><br>
+
+> 使用[cache-loader](https://www.webpackjs.com/loaders/cache-loader/)缓存编译结果提速.
 
 <br><br>
      
