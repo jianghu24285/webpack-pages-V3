@@ -3,16 +3,19 @@
  * @Author: Eleven 
  * @Date: 2018-07-03 00:17:01 
  * @Last Modified by: Eleven
- * @Last Modified time: 2018-07-13 15:53:00
+ * @Last Modified time: 2018-08-22 17:11:07
  */
 
 const path = require('path')
 const glob = require('glob')
+const os = require('os')
 const webpack = require('webpack')
 // extract-text-webpack-plugin插件,将样式提取到单独的css文件里,而不是直接打包到js里.
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 // html-webpack-plugin插件,重中之重,webpack中生成html的插件.
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HappyPack = require('happypack')
+const HappyThreadPool = HappyPack.ThreadPool({size: os.cpus().length})
 
 const ROOT_PATH = path.resolve(__dirname)
 const SRC_PATH = path.resolve(ROOT_PATH, 'src')
@@ -94,15 +97,14 @@ let config = {
             /**
              * es6转码
              *  (npm install babel-core babel-loader babel-preset-env babel-plugin-transform-runtime babel-runtime babel-preset-stage-2 -D)
+             * 
+             * 将js的处理交给happypack => 多核多进程
              */
             {
                 test: /\.js$/,
-                loader: 'babel-loader',
+                loader: 'happypack/loader?id=happyBabel',
                 include: SRC_PATH,
                 exclude: /node_modules/, // 排除 node_modules中的文件，否则所有外部库都会通过babel编译，将会降低编译速度
-                options: {
-                    cacheDirectory: true    // 缓存转码结果,提升编译速度
-                }
             },
             // html中引用的静态资源在这里处理,默认配置参数attrs=img:src,处理图片的src引用的资源.
             {
@@ -160,7 +162,14 @@ let config = {
         // 单独使用link标签加载css并设置路径，相对于output配置中的publickPath
         new ExtractTextPlugin('css/[name].css'),
         // 热加载
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        // 将js处理交给happypack
+        new HappyPack({
+            id: 'happyBabel',
+            loaders: ['cache-loader', 'babel-loader?cacheDirectory=true'],  // cacheDirectory缓存转码结果
+            threadPool: HappyThreadPool,
+            verbose: true   // 允许happypack输出日志
+        })
     ]
 }
 

@@ -21,16 +21,17 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-2": "^6.24.1",
     "babel-runtime": "^6.26.0",
+    "cache-loader": "^1.2.2",
     "cross-env": "^5.2.0",
     "css-loader": "^0.28.11",
     "cssnano": "^4.0.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.11",
     "glob": "^7.1.2",
+    "happypack": "^5.0.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "http-server": "^0.11.1",
-    "jquery": "^3.3.1",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "moment": "^2.22.2",
@@ -41,5 +42,8 @@
     "url-loader": "^1.0.1",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.7"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
   }
 }
