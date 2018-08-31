@@ -437,7 +437,7 @@ npm run server 或 npm run http-server
      a) 通过script-loader、exports-loader转成符合webpack模块化规范的包
      ```bash
      {
-        // # require.resolve()是nodejs用来查找模块位置的发放,返回模块的入口文件
+        // # require.resolve()是nodejs用来查找模块位置的方法,返回模块的入口文件
         test: require.resolve('./src/js/lib/zepto.min.js'),
         loader: 'exports-loader?window.Zepto!script-loader'
      }
