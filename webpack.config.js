@@ -3,7 +3,7 @@
  * @Author: Eleven 
  * @Date: 2018-07-03 00:17:01 
  * @Last Modified by: Eleven
- * @Last Modified time: 2018-08-22 17:11:07
+ * @Last Modified time: 2018-09-01 01:18:16
  */
 
 const path = require('path')
@@ -37,7 +37,7 @@ let getFilesName = (filesPath) => {
         entry = files[i]
         extname = path.extname(entry) // 扩展名 eg: .html
         basename = path.basename(entry, extname) // 文件名 eg: index
-        entries.push(basename);
+        entries.push(basename)
     }
     return entries
 }
@@ -47,7 +47,7 @@ let getEntries = () => {
     let obj = {}
 
     getFilesName('src/js/pages/**/*.js').forEach(fileName => {
-        obj[fileName] = './src/js/pages/' + fileName + '.js';
+        obj[fileName] = './src/js/pages/' + fileName + '.js'
     })
     return obj
 }
@@ -104,7 +104,7 @@ let config = {
                 test: /\.js$/,
                 loader: 'happypack/loader?id=happyBabel',
                 include: SRC_PATH,
-                exclude: /node_modules/, // 排除 node_modules中的文件，否则所有外部库都会通过babel编译，将会降低编译速度
+                exclude: /node_modules/ // 排除 node_modules中的文件，否则所有外部库都会通过babel编译，将会降低编译速度
             },
             // html中引用的静态资源在这里处理,默认配置参数attrs=img:src,处理图片的src引用的资源.
             {
