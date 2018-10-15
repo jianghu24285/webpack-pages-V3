@@ -3,7 +3,7 @@
  * @Author: Eleven 
  * @Date: 2018-07-03 00:17:01 
  * @Last Modified by: Eleven
- * @Last Modified time: 2018-09-01 01:18:16
+ * @Last Modified time: 2018-10-16 00:54:46
  */
 
 const path = require('path')
@@ -65,7 +65,12 @@ let config = {
     },
     resolve: {
         //自动扩展文件后缀名，意味着我们require模块可以省略不写后缀名
-        extensions: ['.js', '.json', '.css', '.less'],
+        extensions: [
+            '.js', 
+            '.json', 
+            '.css', 
+            '.less'
+        ],
         //模块别名定义，方便后续直接引用别名，无须多写长长的地址
         alias: {
             'src': SRC_PATH
@@ -118,7 +123,7 @@ let config = {
                     collapseWhitespace: false
                 }
             },
-            // 处理图片(雷同file-loader，更适合图片)
+            // 处理图片(雷同file-loader，url-loader更适合图片)
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
                 loader: 'url-loader',
