@@ -3,6 +3,7 @@ const PostCss = require('postcss')
 module.exports = {
   // parser: 'sugarss', // 一种更简洁的css语法格式
   plugins: {
+    'postcss-flexbugs-fixes': {}, // 修复一些flex的bug
     'postcss-import': {
       addDependencyTo: 'webpack' // 据说可以解决@import的文件内改动后自动编译问题
     },
